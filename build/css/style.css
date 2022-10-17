@@ -229,6 +229,40 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 .hero {
   background: #171717;
   height: 100vh;
@@ -360,11 +394,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero__gift-icon {
+  position: relative;
   width: 60px;
   height: 75px;
   -webkit-transform: rotate(-10deg);
       -ms-transform: rotate(-10deg);
           transform: rotate(-10deg);
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-animation: bounce 2s ease infinite;
+          animation: bounce 2s ease infinite;
 }
 
 .hero__gift-text {
@@ -389,6 +429,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 80px;
   width: 100%;
   margin: 0 auto;
+  -webkit-animation: bounce 1.5s ease infinite;
+          animation: bounce 1.5s ease infinite;
 }
 
 .hero__bottom-arrow img {
@@ -400,6 +442,8 @@ body::-webkit-scrollbar-thumb {
   height: 15px;
   background: green;
   border-radius: 999px;
+  -webkit-animation: fade 2s ease-in-out infinite;
+          animation: fade 2s ease-in-out infinite;
 }
 
 .benefits {
@@ -499,25 +543,28 @@ body::-webkit-scrollbar-thumb {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .footer__box {
   max-width: 350px;
+  width: 100%;
 }
 
 .footer__logo {
   font-weight: 700;
   font-size: 38px;
   line-height: 38px;
+  gap: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 
 .footer__text {
@@ -542,7 +589,8 @@ body::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8px;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .footer__soc-link {
@@ -695,8 +743,33 @@ body::-webkit-scrollbar-thumb {
     margin: 20% 0;
   }
 
+  .hero__btn {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
   .benefits__item-text {
     font-size: 16px;
     line-height: 28px;
+  }
+
+  .footer__wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .footer__logo {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .footer__tel {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .footer__inn {
+    margin-top: 50px;
   }
 }
