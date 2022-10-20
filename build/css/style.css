@@ -289,8 +289,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero__logo {
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
 }
 
 .hero__top-date {
@@ -453,7 +453,7 @@ body::-webkit-scrollbar-thumb {
 .benefits__wrapper {
   margin: 50px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px 30px;
 }
 
@@ -468,8 +468,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .benefits__item-text {
-  font-size: 20px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 29px;
 }
 
 .reviews {
@@ -567,6 +567,10 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 20px;
 }
 
+.footer__logo img {
+  max-width: 60px;
+}
+
 .footer__text {
   font-size: 16px;
   line-height: 26px;
@@ -625,7 +629,11 @@ body::-webkit-scrollbar-thumb {
   margin-top: 100px;
   font-style: italic;
   font-size: 12px;
-  line-height: 19px;
+  line-height: 26px;
+}
+
+.footer__inn span {
+  font-weight: 700;
 }
 
 @media (max-width: 1449.98px) {
@@ -646,6 +654,10 @@ body::-webkit-scrollbar-thumb {
   .hero__title {
     font-size: 48px;
     line-height: 48px;
+  }
+
+  .benefits__wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -750,7 +762,7 @@ body::-webkit-scrollbar-thumb {
 
   .benefits__item-text {
     font-size: 16px;
-    line-height: 28px;
+    line-height: 26px;
   }
 
   .footer__wrapper {
