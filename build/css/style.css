@@ -266,7 +266,7 @@ body::-webkit-scrollbar-thumb {
 .hero {
   background: #171717;
   height: 100vh;
-  background-image: url(../img/hero/hero-img1.png);
+  background-image: url(../img/hero/hero-img-new.png);
   background-repeat: no-repeat;
   background-position: top 100px right;
   background-size: contain;
@@ -372,7 +372,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero__timeleft {
-  font-size: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  font-size: 26px;
   line-height: 34px;
   padding: 10px 30px;
   border-radius: 20px;
@@ -626,9 +630,15 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
+@media (min-width: 1449.98px) {
+  .hero {
+    background-position: top 100px right 200px;
+  }
+}
+
 @media (max-width: 1449.98px) {
   .hero {
-    background-position: top 100px right -100px;
+    background-position: top 100px right 100px;
   }
 
   .hero__wrapper {
@@ -638,7 +648,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 991.98px) {
   .hero {
-    background-position: top 120px right -200px;
+    background-position: top 120px right -100px;
   }
 
   .hero__title {
@@ -727,7 +737,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .hero {
-    background-position: top 120px right -200px;
+    background-position: top 120px right -100px;
   }
 
   .hero__wrapper {

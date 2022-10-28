@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="./img/favicon.ico">
+    <link rel="icon" href="./img/logo.png">
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -27,7 +27,7 @@
 <section class="hero">
     <div class="container">
 
-        <div class="hero__wrapper">
+        <div class="hero__wrapper" onload="go()">
             <div class="hero__content">
                 <div class="hero__top">
                     <img class="hero__logo logo" src="./img/logo.png" alt="logo">
@@ -35,20 +35,49 @@
                     <div class="hero__top-date">
                         <div class="atom"></div>
     
-                        <p class="hero__top-text medium">16 октября в 19:00 МСК</p>
+                        <p class="hero__top-text medium">Каждый день в 20:00 МСК</p>
                     </div>
     
                     <p class="hero__top-text">Мастер-класс Руслана Курбанова</p>
                 </div>
     
-                <h1 class="hero__title">Как запустить <br> <span class="pink">бизнес на Wildberries</span> <br> за 7 дней с нуля</h1>
+                <h1 class="hero__title">Как пошагово выйти <br> <span class="pink">на WILDBERRIES</span> <br>
+                    И стать топ 1 за 14 дней</h1>
     
                 <div class="hero__btns">
                     <a class="hero__btn" href="#">УЧАСТВОВАТЬ БЕСПЛАТНО</a>
     
                     <svg class="hero__btn-arrow" viewBox="0 0 243.84 75.68" width="70" height="20" fill="white"><polygon class="cls-1" points="206 0 201.76 4.24 232.36 34.84 0 34.84 0 40.84 232.36 40.84 201.76 71.43 206 75.67 243.84 37.84 206 0"/> </g> </g> </svg>
     
-                    <p class="hero__timeleft">0:0</p>
+                    <div class="hero__timeleft" id="timer">
+
+                            <!-- <div class="timer-section">
+                                <div class="days-block">
+                                    <span class="days">00</span>
+                                </div>
+                            </div>
+                            : -->
+                            
+                            <div class="timer-section">
+                                <div class="hours-block">
+                                    <span class="hours">00</span>
+                                </div>
+                            </div>
+                            :
+                            
+                            <div class="timer-section">
+                                <div class="minutes-block">
+                                    <span class="minutes">00</span>
+                                </div>
+                            </div>
+                            :
+                            
+                            <div class="timer-section">
+                                <div class="seconds-block">
+                                    <span class="seconds">00</span>
+                                </div>
+                            </div>
+                    </div>
                 </div>
     
                 <div class="hero__gift">
