@@ -83,18 +83,25 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+  display: none;
 }
 
 .modal__wrapper .modal {
-  background: white;
-  padding: 25px;
-  border-radius: 5px;
-  height: 350px;
-  width: 300px;
+  background: #f0f0f0;
+  padding: 40px 45px;
+  max-height: 620px;
+  max-width: 560px;
+  width: 100%;
+  height: 100%;
 }
 
 .modal__wrapper .modal__title {
   text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000;
+  margin-bottom: 50px;
 }
 
 .modal__wrapper .modal__close {
@@ -107,21 +114,20 @@ h6 {
           justify-content: flex-end;
 }
 
-.modal__btn {
+.modal__wrapper .modal__checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid black;
-  border-radius: 30px;
-  height: 50px;
-  width: 150px;
-  cursor: pointer;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.modal__wrapper .modal__checkbox-text {
+  color: #949494;
+  font-size: 14px;
 }
 
 @font-face {
@@ -450,6 +456,106 @@ body::-webkit-scrollbar-thumb {
           animation: fade 2s ease-in-out infinite;
 }
 
+.contact-form {
+  max-width: 100%;
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  outline: none;
+  max-width: 100%;
+  padding: 5px 0 18px;
+  margin-bottom: 30px;
+  background: none;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  border-bottom: 2px solid #8E8E8E;
+}
+
+input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, input[type=tel]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #8E8E8E;
+}
+
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=tel]::-moz-placeholder, textarea::-moz-placeholder {
+  color: #8E8E8E;
+}
+
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=tel]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #8E8E8E;
+}
+
+input[type=text]::-ms-input-placeholder, input[type=email]::-ms-input-placeholder, input[type=tel]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #8E8E8E;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=tel]::placeholder,
+textarea::placeholder {
+  color: #8E8E8E;
+}
+
+input[type=text]:focus,
+textarea:focus {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+input[type=button] {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 99px;
+  background: #18b5d8;
+  cursor: pointer;
+  color: #fff;
+}
+
+input[type=button]:hover {
+  background: #028faf;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+input[type=button]:active {
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  top: 3px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+input[type=button]:focus {
+  position: relative;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  outline: none;
+}
+
 .benefits {
   margin: 80px 0;
 }
@@ -662,6 +768,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 767.98px) {
+  .modal__wrapper .modal {
+    padding: 20px;
+  }
+
   .section-title {
     font-size: 26px;
     line-height: 30px;
@@ -698,6 +808,14 @@ body::-webkit-scrollbar-thumb {
 
   .hero__timeleft {
     margin-left: auto;
+  }
+
+  .contact-form {
+    min-width: 80%;
+  }
+
+  textarea {
+    min-height: auto;
   }
 
   .benefits__wrapper {
@@ -758,6 +876,10 @@ body::-webkit-scrollbar-thumb {
   .hero__btn {
     font-size: 15px;
     line-height: 17px;
+  }
+
+  .contact-form {
+    min-width: 100%;
   }
 
   .benefits__item-text {
