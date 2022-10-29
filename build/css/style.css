@@ -284,6 +284,10 @@ body::-webkit-scrollbar-thumb {
   padding-top: 150px;
 }
 
+.hero__content-2 {
+  max-width: 600px;
+}
+
 .hero__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -330,6 +334,49 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
   width: 100%;
   margin: 50px 0;
+}
+
+.hero__title-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  font-size: 52px;
+  line-height: 52px;
+  margin-bottom: 20px;
+}
+
+.hero__title-2 img {
+  max-width: 40px;
+}
+
+.hero__pretext {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.hero__pretitle {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 45px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: #18b5d8;
+}
+
+.hero__telegram {
+  max-width: 300px;
+  width: 100%;
+  margin-top: 50px;
+  display: block;
+}
+
+.hero__telegram img {
+  width: 100%;
 }
 
 .hero__btns {
@@ -762,6 +809,22 @@ input[type=button]:focus {
     line-height: 48px;
   }
 
+  .hero__title-2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .hero__pretext {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .hero__pretitle {
+    font-size: 34px;
+    line-height: 34px;
+    margin-top: 20px;
+  }
+
   .benefits__wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -871,6 +934,22 @@ input[type=button]:focus {
     font-size: 31px;
     line-height: 31px;
     margin: 20% 0;
+  }
+
+  .hero__title-2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 8% 0;
+  }
+
+  .hero__pretext {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .hero__pretitle {
+    font-size: 22px;
+    line-height: 22px;
   }
 
   .hero__btn {
